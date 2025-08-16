@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './QuizSelector.css';
 
 const API_URL = "http://localhost:5001";
 
