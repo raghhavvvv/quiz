@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './CountryFlagQuiz.css';
 
-const API_URL = "http://localhost:5001";
+const API_URL = "https://quiz-wfun.onrender.com";
 
 function CountryFlagQuiz({ onBack }) {
   const [questions, setQuestions] = useState([]);
