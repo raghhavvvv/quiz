@@ -7,14 +7,12 @@ const PORT = 5001;
 app.use(cors());
 app.use(express.json());
 
-// --- In-Memory Database ---
 const quizDatabase = [
   {
-    // --- Multiple Choice Question (Buttons) ---
     questionId: 'q1',
     questionType: 'multiple-choice',
     questionText: 'How many complete apples are in the picture?',
-    imageId: 'http://quiz-wfun.onrender.com/images/apples.jpg',
+    imageId: 'http://localhost:5001/images/apples.jpg',
     options: [
       { optionId: 'q1-optA', text: '2', isCorrect: false },
       { optionId: 'q1-optB', text: '3', isCorrect: true },
@@ -27,7 +25,7 @@ const quizDatabase = [
     questionId: 'q2',
     questionType: 'checkboxes',
     questionText: 'Which fruits are typically red when ripe?',
-    imageId: 'https://quiz-wfun.onrender.com/images/apples.jpg',
+    imageId: 'http://localhost:5001/images/apples.jpg',
     options: [
       { optionId: 'q2-optA', text: 'Apple', isCorrect: true },
       { optionId: 'q2-optB', text: 'Strawberry', isCorrect: true },
@@ -65,7 +63,7 @@ const quizDatabase = [
     questionId: 'q5',
     questionType: 'pinpoint',
     questionText: 'Click on the apple with the most visible stem.',
-    imageId: 'https://quiz-wfun.onrender.com/images/apples.jpg',
+    imageId: 'http://localhost:5001/images/apples.jpg',
     correctLocation: { x: 0.3, y: 0.5 },
     tolerance: 0.15,
     pinpointInstructions: 'Look carefully at each apple and identify which one has the most visible stem. Click precisely on that apple.',
@@ -134,11 +132,252 @@ const quizDatabase = [
       ]
     }
   },
+  // Car Logo Quiz Questions
+  {
+    questionId: 'car1',
+    questionType: 'multiple-choice',
+    questionText: 'Which car brand does this logo belong to?',
+    imageId: 'https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg',
+    options: [
+      { optionId: 'car1-optA', text: 'Mercedes-Benz', isCorrect: false },
+      { optionId: 'car1-optB', text: 'BMW', isCorrect: true },
+      { optionId: 'car1-optC', text: 'Audi', isCorrect: false },
+      { optionId: 'car1-optD', text: 'Volkswagen', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'car2',
+    questionType: 'multiple-choice',
+    questionText: 'Which car brand does this logo belong to?',
+    imageId: 'https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg',
+    options: [
+      { optionId: 'car2-optA', text: 'Mercedes-Benz', isCorrect: true },
+      { optionId: 'car2-optB', text: 'BMW', isCorrect: false },
+      { optionId: 'car2-optC', text: 'Audi', isCorrect: false },
+      { optionId: 'car2-optD', text: 'Lexus', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'car3',
+    questionType: 'multiple-choice',
+    questionText: 'Which car brand does this logo belong to?',
+    imageId: 'https://upload.wikimedia.org/wikipedia/commons/9/92/Audi-Logo_2016.svg',
+    options: [
+      { optionId: 'car3-optA', text: 'BMW', isCorrect: false },
+      { optionId: 'car3-optB', text: 'Mercedes-Benz', isCorrect: false },
+      { optionId: 'car3-optC', text: 'Audi', isCorrect: true },
+      { optionId: 'car3-optD', text: 'Volkswagen', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'car4',
+    questionType: 'multiple-choice',
+    questionText: 'Which car brand does this logo belong to?',
+    imageId: 'https://upload.wikimedia.org/wikipedia/commons/6/60/Toyota-logo.svg',
+    options: [
+      { optionId: 'car4-optA', text: 'Honda', isCorrect: false },
+      { optionId: 'car4-optB', text: 'Toyota', isCorrect: true },
+      { optionId: 'car4-optC', text: 'Nissan', isCorrect: false },
+      { optionId: 'car4-optD', text: 'Mazda', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'car5',
+    questionType: 'multiple-choice',
+    questionText: 'Which car brand does this logo belong to?',
+    imageId: 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Ford-logo.svg',
+    options: [
+      { optionId: 'car5-optA', text: 'Chevrolet', isCorrect: false },
+      { optionId: 'car5-optB', text: 'Ford', isCorrect: true },
+      { optionId: 'car5-optC', text: 'Dodge', isCorrect: false },
+      { optionId: 'car5-optD', text: 'Chrysler', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'car6',
+    questionType: 'multiple-choice',
+    questionText: 'Which car brand does this logo belong to?',
+    imageId: 'https://upload.wikimedia.org/wikipedia/commons/7/76/Honda.svg',
+    options: [
+      { optionId: 'car6-optA', text: 'Honda', isCorrect: true },
+      { optionId: 'car6-optB', text: 'Toyota', isCorrect: false },
+      { optionId: 'car6-optC', text: 'Hyundai', isCorrect: false },
+      { optionId: 'car6-optD', text: 'Acura', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'car7',
+    questionType: 'multiple-choice',
+    questionText: 'Which car brand does this logo belong to?',
+    imageId: 'https://upload.wikimedia.org/wikipedia/commons/6/60/Volkswagen_logo_2019.svg',
+    options: [
+      { optionId: 'car7-optA', text: 'Audi', isCorrect: false },
+      { optionId: 'car7-optB', text: 'BMW', isCorrect: false },
+      { optionId: 'car7-optC', text: 'Volkswagen', isCorrect: true },
+      { optionId: 'car7-optD', text: 'Porsche', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'car8',
+    questionType: 'multiple-choice',
+    questionText: 'Which car brand does this logo belong to?',
+    imageId: 'https://upload.wikimedia.org/wikipedia/de/9/90/Ferrari_Logo.svg',
+    options: [
+      { optionId: 'car8-optA', text: 'Lamborghini', isCorrect: false },
+      { optionId: 'car8-optB', text: 'Ferrari', isCorrect: true },
+      { optionId: 'car8-optC', text: 'Maserati', isCorrect: false },
+      { optionId: 'car8-optD', text: 'Porsche', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'car9',
+    questionType: 'multiple-choice',
+    questionText: 'Which car brand does this logo belong to?',
+    imageId: 'https://upload.wikimedia.org/wikipedia/commons/0/00/Nissan-logo.svg',
+    options: [
+      { optionId: 'car9-optA', text: 'Toyota', isCorrect: false },
+      { optionId: 'car9-optB', text: 'Honda', isCorrect: false },
+      { optionId: 'car9-optC', text: 'Nissan', isCorrect: true },
+      { optionId: 'car9-optD', text: 'Mazda', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'car10',
+    questionType: 'multiple-choice',
+    questionText: 'Which car brand does this logo belong to?',
+    imageId: 'https://upload.wikimedia.org/wikipedia/commons/b/bb/Tesla_T_symbol.svg',
+    options: [
+      { optionId: 'car10-optA', text: 'Tesla', isCorrect: true },
+      { optionId: 'car10-optB', text: 'Lucid', isCorrect: false },
+      { optionId: 'car10-optC', text: 'Rivian', isCorrect: false },
+      { optionId: 'car10-optD', text: 'NIO', isCorrect: false },
+    ],
+  },
+  // Country Flag Quiz Questions
+  {
+    questionId: 'flag1',
+    questionType: 'multiple-choice',
+    questionText: 'Which country does this flag belong to?',
+    imageId: 'https://flagcdn.com/w320/us.png',
+    options: [
+      { optionId: 'flag1-optA', text: 'United States', isCorrect: true },
+      { optionId: 'flag1-optB', text: 'United Kingdom', isCorrect: false },
+      { optionId: 'flag1-optC', text: 'Canada', isCorrect: false },
+      { optionId: 'flag1-optD', text: 'Australia', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'flag2',
+    questionType: 'multiple-choice',
+    questionText: 'Which country does this flag belong to?',
+    imageId: 'https://flagcdn.com/w320/jp.png',
+    options: [
+      { optionId: 'flag2-optA', text: 'China', isCorrect: false },
+      { optionId: 'flag2-optB', text: 'Japan', isCorrect: true },
+      { optionId: 'flag2-optC', text: 'South Korea', isCorrect: false },
+      { optionId: 'flag2-optD', text: 'Bangladesh', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'flag3',
+    questionType: 'multiple-choice',
+    questionText: 'Which country does this flag belong to?',
+    imageId: 'https://flagcdn.com/w320/fr.png',
+    options: [
+      { optionId: 'flag3-optA', text: 'Netherlands', isCorrect: false },
+      { optionId: 'flag3-optB', text: 'France', isCorrect: true },
+      { optionId: 'flag3-optC', text: 'Russia', isCorrect: false },
+      { optionId: 'flag3-optD', text: 'Czech Republic', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'flag4',
+    questionType: 'multiple-choice',
+    questionText: 'Which country does this flag belong to?',
+    imageId: 'https://flagcdn.com/w320/de.png',
+    options: [
+      { optionId: 'flag4-optA', text: 'Belgium', isCorrect: false },
+      { optionId: 'flag4-optB', text: 'Germany', isCorrect: true },
+      { optionId: 'flag4-optC', text: 'Austria', isCorrect: false },
+      { optionId: 'flag4-optD', text: 'Netherlands', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'flag5',
+    questionType: 'multiple-choice',
+    questionText: 'Which country does this flag belong to?',
+    imageId: 'https://flagcdn.com/w320/br.png',
+    options: [
+      { optionId: 'flag5-optA', text: 'Argentina', isCorrect: false },
+      { optionId: 'flag5-optB', text: 'Brazil', isCorrect: true },
+      { optionId: 'flag5-optC', text: 'Colombia', isCorrect: false },
+      { optionId: 'flag5-optD', text: 'Venezuela', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'flag6',
+    questionType: 'multiple-choice',
+    questionText: 'Which country does this flag belong to?',
+    imageId: 'https://flagcdn.com/w320/ca.png',
+    options: [
+      { optionId: 'flag6-optA', text: 'Canada', isCorrect: true },
+      { optionId: 'flag6-optB', text: 'United States', isCorrect: false },
+      { optionId: 'flag6-optC', text: 'Poland', isCorrect: false },
+      { optionId: 'flag6-optD', text: 'Lebanon', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'flag7',
+    questionType: 'multiple-choice',
+    questionText: 'Which country does this flag belong to?',
+    imageId: 'https://flagcdn.com/w320/in.png',
+    options: [
+      { optionId: 'flag7-optA', text: 'Pakistan', isCorrect: false },
+      { optionId: 'flag7-optB', text: 'India', isCorrect: true },
+      { optionId: 'flag7-optC', text: 'Bangladesh', isCorrect: false },
+      { optionId: 'flag7-optD', text: 'Sri Lanka', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'flag8',
+    questionType: 'multiple-choice',
+    questionText: 'Which country does this flag belong to?',
+    imageId: 'https://flagcdn.com/w320/au.png',
+    options: [
+      { optionId: 'flag8-optA', text: 'New Zealand', isCorrect: false },
+      { optionId: 'flag8-optB', text: 'Australia', isCorrect: true },
+      { optionId: 'flag8-optC', text: 'United Kingdom', isCorrect: false },
+      { optionId: 'flag8-optD', text: 'Fiji', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'flag9',
+    questionType: 'multiple-choice',
+    questionText: 'Which country does this flag belong to?',
+    imageId: 'https://flagcdn.com/w320/mx.png',
+    options: [
+      { optionId: 'flag9-optA', text: 'Italy', isCorrect: false },
+      { optionId: 'flag9-optB', text: 'Mexico', isCorrect: true },
+      { optionId: 'flag9-optC', text: 'Ireland', isCorrect: false },
+      { optionId: 'flag9-optD', text: 'Hungary', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'flag10',
+    questionType: 'multiple-choice',
+    questionText: 'Which country does this flag belong to?',
+    imageId: 'https://flagcdn.com/w320/gb.png',
+    options: [
+      { optionId: 'flag10-optA', text: 'United Kingdom', isCorrect: true },
+      { optionId: 'flag10-optB', text: 'United States', isCorrect: false },
+      { optionId: 'flag10-optC', text: 'Australia', isCorrect: false },
+      { optionId: 'flag10-optD', text: 'New Zealand', isCorrect: false },
+    ],
+  },
 ];
 
 // --- API Routes ---
 
-// GET all available quiz types
 app.get('/api/quiz-types', (req, res) => {
   const quizTypes = [
     { id: 'multiple-choice', name: 'Buttons', description: 'One correct answer', icon: '🔘' },
@@ -153,7 +392,6 @@ app.get('/api/quiz-types', (req, res) => {
   res.json(quizTypes);
 });
 
-// GET a specific quiz question (now handles all types)
 app.get('/api/quiz/:questionId', (req, res) => {
   const { questionId } = req.params;
   const questionRecord = quizDatabase.find((q) => q.questionId === questionId);
@@ -162,7 +400,6 @@ app.get('/api/quiz/:questionId', (req, res) => {
     return res.status(404).json({ message: 'Question not found' });
   }
 
-  // Sanitize the data based on question type
   let dataForFrontend;
   if (questionRecord.questionType === 'multiple-choice' || questionRecord.questionType === 'checkboxes') {
     const sanitizedOptions = questionRecord.options.map(({ optionId, text }) => ({
@@ -220,7 +457,6 @@ app.get('/api/quiz/:questionId', (req, res) => {
   res.json(dataForFrontend);
 });
 
-// POST to check the answer (now handles both types)
 app.post('/api/quiz/check-answer', (req, res) => {
   const { questionId, answer } = req.body;
 
@@ -231,7 +467,6 @@ app.post('/api/quiz/check-answer', (req, res) => {
 
   let isCorrect = false;
 
-  // Validation logic depends on the question type
   if (questionRecord.questionType === 'multiple-choice') {
     const correctOption = questionRecord.options.find(opt => opt.isCorrect);
     isCorrect = correctOption && correctOption.optionId === answer.userAnswerId;
@@ -242,7 +477,6 @@ app.post('/api/quiz/check-answer', (req, res) => {
       .filter(opt => opt.isCorrect)
       .map(opt => opt.optionId);
     
-    // Check if all correct options are selected and no incorrect ones
     const allCorrectSelected = correctOptionIds.every(id => userSelectedIds.includes(id));
     const noIncorrectSelected = !userSelectedIds.some(id => 
       !correctOptionIds.includes(id)
@@ -290,22 +524,18 @@ app.post('/api/quiz/check-answer', (req, res) => {
     const tolerance = questionRecord.mapConfig.tolerance;
     
     if (userLocation && userLocation.lat && userLocation.lng) {
-      // Calculate distance between user's click and correct location
       const latDiff = Math.abs(userLocation.lat - correctLocation.lat);
       const lngDiff = Math.abs(userLocation.lng - correctLocation.lng);
       
-      // Check if within tolerance (simplified distance calculation)
       isCorrect = latDiff <= tolerance && lngDiff <= tolerance;
     } else {
       isCorrect = false;
     }
   }
 
-  // Respond to the client
   if (isCorrect) {
     res.json({ result: 'correct' });
   } else {
-    // For incorrect answers, send back appropriate feedback
     const response = { result: 'incorrect' };
     
     if (questionRecord.questionType === 'multiple-choice') {

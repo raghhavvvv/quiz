@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-const API_URL = "https://quiz-wfun.onrender.com";
+const API_URL = "http://localhost:5001";
 
-function QuizSelector({ onQuizSelect }) {
+function QuizSelector({ onQuizSelect, onBack }) {
   const [quizTypes, setQuizTypes] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -26,8 +26,9 @@ function QuizSelector({ onQuizSelect }) {
   return (
     <div className="quiz-selector">
       <div className="selector-header">
-        <h1>QUIZ.com</h1>
-        <button className="done-button">Done</button>
+        <button onClick={onBack} className="back-button">← Back</button>
+        <h1>Advanced Quizzes</h1>
+        <div className="spacer"></div>
       </div>
 
       <div className="quiz-types-grid">

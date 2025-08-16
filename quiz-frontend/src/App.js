@@ -1,12 +1,22 @@
 import React, { useState } from 'react';
+import HomePage from './HomePage';
 import QuizSelector from './QuizSelector';
 import AdvancedQuiz from './AdvancedQuiz';
+import CarLogoQuiz from './CarLogoQuiz';
+import CountryFlagQuiz from './CountryFlagQuiz';
 import './App.css';
 
 function App() {
-  const [currentView, setCurrentView] = useState('selector'); // 'selector' or 'quiz'
+  const [currentView, setCurrentView] = useState('home'); // 'home', 'car-logos', 'country-flags', 'quiz-selector', or 'advanced-quiz'
   const [selectedQuizType, setSelectedQuizType] = useState(null);
   const [selectedQuestionId, setSelectedQuestionId] = useState(null);
+
+  const handleNavigate = (view) => {
+    setCurrentView(view);
+    // Reset quiz state when navigating
+    setSelectedQuizType(null);
+    setSelectedQuestionId(null);
+  };
 
   const handleQuizTypeSelect = (quizType) => {
     setSelectedQuizType(quizType);
@@ -21,20 +31,40 @@ function App() {
       'real-world-map': 'q7'
     };
     setSelectedQuestionId(questionMap[quizType]);
-    setCurrentView('quiz');
+    setCurrentView('advanced-quiz');
+  };
+
+  const handleBackToHome = () => {
+    setCurrentView('home');
+    setSelectedQuizType(null);
+    setSelectedQuestionId(null);
   };
 
   const handleBackToSelector = () => {
-    setCurrentView('selector');
+    setCurrentView('quiz-selector');
     setSelectedQuizType(null);
     setSelectedQuestionId(null);
   };
 
   return (
     <div className="App">
-      {currentView === 'selector' ? (
-        <QuizSelector onQuizSelect={handleQuizTypeSelect} />
-      ) : (
+      {currentView === 'home' && (
+        <HomePage onNavigate={handleNavigate} />
+      )}
+      
+      {currentView === 'car-logos' && (
+        <CarLogoQuiz onBack={handleBackToHome} />
+      )}
+      
+      {currentView === 'country-flags' && (
+        <CountryFlagQuiz onBack={handleBackToHome} />
+      )}
+      
+      {currentView === 'quiz-selector' && (
+        <QuizSelector onQuizSelect={handleQuizTypeSelect} onBack={handleBackToHome} />
+      )}
+      
+      {currentView === 'advanced-quiz' && (
         <AdvancedQuiz 
           questionId={selectedQuestionId} 
           onBack={handleBackToSelector}

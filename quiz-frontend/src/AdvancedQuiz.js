@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import './AdvancedQuiz.css';
 
-const API_URL = "https://quiz-wfun.onrender.com";
+const API_URL = "http://localhost:5001";
 
 function AdvancedQuiz({ questionId, onBack }) {
   const [question, setQuestion] = useState(null);
