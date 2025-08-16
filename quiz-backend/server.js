@@ -14,7 +14,7 @@ const quizDatabase = [
     questionId: 'q1',
     questionType: 'multiple-choice',
     questionText: 'How many complete apples are in the picture?',
-    imageId: 'http://localhost:5001/images/apples.jpg',
+    imageId: 'http://quiz-wfun.onrender.com/images/apples.jpg',
     options: [
       { optionId: 'q1-optA', text: '2', isCorrect: false },
       { optionId: 'q1-optB', text: '3', isCorrect: true },
@@ -27,7 +27,7 @@ const quizDatabase = [
     questionId: 'q2',
     questionType: 'checkboxes',
     questionText: 'Which fruits are typically red when ripe?',
-    imageId: 'http://localhost:5001/images/apples.jpg',
+    imageId: 'https://quiz-wfun.onrender.com/images/apples.jpg',
     options: [
       { optionId: 'q2-optA', text: 'Apple', isCorrect: true },
       { optionId: 'q2-optB', text: 'Strawberry', isCorrect: true },
@@ -65,7 +65,7 @@ const quizDatabase = [
     questionId: 'q5',
     questionType: 'pinpoint',
     questionText: 'Click on the apple with the most visible stem.',
-    imageId: 'http://localhost:5001/images/apples.jpg',
+    imageId: 'https://quiz-wfun.onrender.com/images/apples.jpg',
     correctLocation: { x: 0.3, y: 0.5 },
     tolerance: 0.15,
     pinpointInstructions: 'Look carefully at each apple and identify which one has the most visible stem. Click precisely on that apple.',
