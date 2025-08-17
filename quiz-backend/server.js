@@ -156,111 +156,95 @@ const quizDatabase = [
   },
   {
     questionId: 'car2',
-    questionType: 'multiple-choice',
-    questionText: 'Which car brand does this logo belong to?',
-    imageId: 'https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg',
-    options: [
-      { optionId: 'car2-optA', text: 'Mercedes-Benz', isCorrect: true },
-      { optionId: 'car2-optB', text: 'BMW', isCorrect: false },
-      { optionId: 'car2-optC', text: 'Audi', isCorrect: false },
-      { optionId: 'car2-optD', text: 'Lexus', isCorrect: false },
-    ],
+    questionType: 'type-answer',
+    questionText: 'What car brand is known for the slogan "The Ultimate Driving Machine"?',
+    correctAnswers: ['bmw', 'BMW'],
+    caseSensitive: false,
   },
   {
     questionId: 'car3',
     questionType: 'multiple-choice',
     questionText: 'Which car brand does this logo belong to?',
-    imageId: 'https://upload.wikimedia.org/wikipedia/commons/9/92/Audi-Logo_2016.svg',
+    imageId: 'https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg',
     options: [
-      { optionId: 'car3-optA', text: 'BMW', isCorrect: false },
-      { optionId: 'car3-optB', text: 'Mercedes-Benz', isCorrect: false },
-      { optionId: 'car3-optC', text: 'Audi', isCorrect: true },
-      { optionId: 'car3-optD', text: 'Volkswagen', isCorrect: false },
+      { optionId: 'car3-optA', text: 'Mercedes-Benz', isCorrect: true },
+      { optionId: 'car3-optB', text: 'BMW', isCorrect: false },
+      { optionId: 'car3-optC', text: 'Audi', isCorrect: false },
+      { optionId: 'car3-optD', text: 'Lexus', isCorrect: false },
     ],
   },
   {
     questionId: 'car4',
-    questionType: 'multiple-choice',
-    questionText: 'Which car brand does this logo belong to?',
-    imageId: 'https://upload.wikimedia.org/wikipedia/commons/6/60/Toyota-logo.svg',
+    questionType: 'checkboxes',
+    questionText: 'Which of these are German car brands?',
     options: [
-      { optionId: 'car4-optA', text: 'Honda', isCorrect: false },
-      { optionId: 'car4-optB', text: 'Toyota', isCorrect: true },
-      { optionId: 'car4-optC', text: 'Nissan', isCorrect: false },
-      { optionId: 'car4-optD', text: 'Mazda', isCorrect: false },
+      { optionId: 'car4-optA', text: 'BMW', isCorrect: true },
+      { optionId: 'car4-optB', text: 'Toyota', isCorrect: false },
+      { optionId: 'car4-optC', text: 'Mercedes-Benz', isCorrect: true },
+      { optionId: 'car4-optD', text: 'Honda', isCorrect: false },
+      { optionId: 'car4-optE', text: 'Audi', isCorrect: true },
     ],
   },
   {
     questionId: 'car5',
-    questionType: 'multiple-choice',
-    questionText: 'Which car brand does this logo belong to?',
-    imageId: 'https://upload.wikimedia.org/wikipedia/commons/3/3e/Ford-logo.svg',
-    options: [
-      { optionId: 'car5-optA', text: 'Chevrolet', isCorrect: false },
-      { optionId: 'car5-optB', text: 'Ford', isCorrect: true },
-      { optionId: 'car5-optC', text: 'Dodge', isCorrect: false },
-      { optionId: 'car5-optD', text: 'Chrysler', isCorrect: false },
-    ],
+    questionType: 'range',
+    questionText: 'On a scale of 1-10, how expensive do you think a new BMW typically is? (1=very affordable, 10=very expensive)',
+    minValue: 1,
+    maxValue: 10,
+    correctAnswer: 8,
+    tolerance: 1,
   },
   {
     questionId: 'car6',
-    questionType: 'multiple-choice',
-    questionText: 'Which car brand does this logo belong to?',
-    imageId: 'https://upload.wikimedia.org/wikipedia/commons/7/76/Honda.svg',
-    options: [
-      { optionId: 'car6-optA', text: 'Honda', isCorrect: true },
-      { optionId: 'car6-optB', text: 'Toyota', isCorrect: false },
-      { optionId: 'car6-optC', text: 'Hyundai', isCorrect: false },
-      { optionId: 'car6-optD', text: 'Acura', isCorrect: false },
+    questionType: 'reorder',
+    questionText: 'Arrange these car brands by their founding year (oldest first):',
+    items: [
+      { itemId: 'mercedes', text: 'Mercedes-Benz (1926)' },
+      { itemId: 'bmw', text: 'BMW (1916)' },
+      { itemId: 'audi', text: 'Audi (1909)' },
+      { itemId: 'volkswagen', text: 'Volkswagen (1937)' },
     ],
+    correctOrder: ['audi', 'bmw', 'mercedes', 'volkswagen'],
   },
   {
     questionId: 'car7',
     questionType: 'multiple-choice',
     questionText: 'Which car brand does this logo belong to?',
-    imageId: 'https://upload.wikimedia.org/wikipedia/commons/6/60/Volkswagen_logo_2019.svg',
+    imageId: 'https://upload.wikimedia.org/wikipedia/commons/6/60/Toyota-logo.svg',
     options: [
-      { optionId: 'car7-optA', text: 'Audi', isCorrect: false },
-      { optionId: 'car7-optB', text: 'BMW', isCorrect: false },
-      { optionId: 'car7-optC', text: 'Volkswagen', isCorrect: true },
-      { optionId: 'car7-optD', text: 'Porsche', isCorrect: false },
+      { optionId: 'car7-optA', text: 'Honda', isCorrect: false },
+      { optionId: 'car7-optB', text: 'Toyota', isCorrect: true },
+      { optionId: 'car7-optC', text: 'Nissan', isCorrect: false },
+      { optionId: 'car7-optD', text: 'Mazda', isCorrect: false },
     ],
   },
   {
     questionId: 'car8',
-    questionType: 'multiple-choice',
-    questionText: 'Which car brand does this logo belong to?',
-    imageId: 'https://upload.wikimedia.org/wikipedia/de/9/90/Ferrari_Logo.svg',
+    questionType: 'checkboxes',
+    questionText: 'Which of these are Japanese car brands?',
     options: [
-      { optionId: 'car8-optA', text: 'Lamborghini', isCorrect: false },
-      { optionId: 'car8-optB', text: 'Ferrari', isCorrect: true },
-      { optionId: 'car8-optC', text: 'Maserati', isCorrect: false },
-      { optionId: 'car8-optD', text: 'Porsche', isCorrect: false },
+      { optionId: 'car8-optA', text: 'Toyota', isCorrect: true },
+      { optionId: 'car8-optB', text: 'Ford', isCorrect: false },
+      { optionId: 'car8-optC', text: 'Honda', isCorrect: true },
+      { optionId: 'car8-optD', text: 'BMW', isCorrect: false },
+      { optionId: 'car8-optE', text: 'Nissan', isCorrect: true },
     ],
   },
   {
     questionId: 'car9',
-    questionType: 'multiple-choice',
-    questionText: 'Which car brand does this logo belong to?',
-    imageId: 'https://upload.wikimedia.org/wikipedia/commons/0/00/Nissan-logo.svg',
-    options: [
-      { optionId: 'car9-optA', text: 'Toyota', isCorrect: false },
-      { optionId: 'car9-optB', text: 'Honda', isCorrect: false },
-      { optionId: 'car9-optC', text: 'Nissan', isCorrect: true },
-      { optionId: 'car9-optD', text: 'Mazda', isCorrect: false },
-    ],
+    questionType: 'pinpoint',
+    questionText: 'Click on the Ford logo in this image showing multiple car logos.',
+    imageId: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop',
+    correctLocation: { x: 0.6, y: 0.4 },
+    tolerance: 0.2,
+    pinpointInstructions: 'Look for the Ford oval logo among the various car brand logos displayed.',
   },
   {
     questionId: 'car10',
-    questionType: 'multiple-choice',
-    questionText: 'Which car brand does this logo belong to?',
-    imageId: 'https://upload.wikimedia.org/wikipedia/commons/b/bb/Tesla_T_symbol.svg',
-    options: [
-      { optionId: 'car10-optA', text: 'Tesla', isCorrect: true },
-      { optionId: 'car10-optB', text: 'Lucid', isCorrect: false },
-      { optionId: 'car10-optC', text: 'Rivian', isCorrect: false },
-      { optionId: 'car10-optD', text: 'NIO', isCorrect: false },
-    ],
+    questionType: 'type-answer',
+    questionText: 'What electric car company was founded by Elon Musk?',
+    correctAnswers: ['tesla', 'Tesla'],
+    caseSensitive: false,
   },
   // Country Flag Quiz Questions
   {
@@ -277,114 +261,157 @@ const quizDatabase = [
   },
   {
     questionId: 'flag2',
-    questionType: 'multiple-choice',
-    questionText: 'Which country does this flag belong to?',
-    imageId: 'https://flagcdn.com/w320/jp.png',
-    options: [
-      { optionId: 'flag2-optA', text: 'China', isCorrect: false },
-      { optionId: 'flag2-optB', text: 'Japan', isCorrect: true },
-      { optionId: 'flag2-optC', text: 'South Korea', isCorrect: false },
-      { optionId: 'flag2-optD', text: 'Bangladesh', isCorrect: false },
-    ],
+    questionType: 'type-answer',
+    questionText: 'What country has a flag with a red circle on a white background?',
+    correctAnswers: ['japan', 'Japan'],
+    caseSensitive: false,
   },
   {
     questionId: 'flag3',
-    questionType: 'multiple-choice',
-    questionText: 'Which country does this flag belong to?',
-    imageId: 'https://flagcdn.com/w320/fr.png',
-    options: [
-      { optionId: 'flag3-optA', text: 'Netherlands', isCorrect: false },
-      { optionId: 'flag3-optB', text: 'France', isCorrect: true },
-      { optionId: 'flag3-optC', text: 'Russia', isCorrect: false },
-      { optionId: 'flag3-optD', text: 'Czech Republic', isCorrect: false },
-    ],
+    questionType: 'range',
+    questionText: 'How many stars are on the flag of the United States?',
+    minValue: 40,
+    maxValue: 60,
+    correctAnswer: 50,
+    tolerance: 0,
   },
   {
     questionId: 'flag4',
-    questionType: 'multiple-choice',
-    questionText: 'Which country does this flag belong to?',
-    imageId: 'https://flagcdn.com/w320/de.png',
+    questionType: 'checkboxes',
+    questionText: 'Which of these countries have red, white, and blue in their flags?',
     options: [
-      { optionId: 'flag4-optA', text: 'Belgium', isCorrect: false },
-      { optionId: 'flag4-optB', text: 'Germany', isCorrect: true },
-      { optionId: 'flag4-optC', text: 'Austria', isCorrect: false },
-      { optionId: 'flag4-optD', text: 'Netherlands', isCorrect: false },
+      { optionId: 'flag4-optA', text: 'United States', isCorrect: true },
+      { optionId: 'flag4-optB', text: 'Japan', isCorrect: false },
+      { optionId: 'flag4-optC', text: 'France', isCorrect: true },
+      { optionId: 'flag4-optD', text: 'Germany', isCorrect: false },
+      { optionId: 'flag4-optE', text: 'United Kingdom', isCorrect: true },
     ],
   },
   {
     questionId: 'flag5',
-    questionType: 'multiple-choice',
-    questionText: 'Which country does this flag belong to?',
-    imageId: 'https://flagcdn.com/w320/br.png',
-    options: [
-      { optionId: 'flag5-optA', text: 'Argentina', isCorrect: false },
-      { optionId: 'flag5-optB', text: 'Brazil', isCorrect: true },
-      { optionId: 'flag5-optC', text: 'Colombia', isCorrect: false },
-      { optionId: 'flag5-optD', text: 'Venezuela', isCorrect: false },
+    questionType: 'reorder',
+    questionText: 'Arrange these countries by their population size (largest first):',
+    items: [
+      { itemId: 'china', text: 'China' },
+      { itemId: 'usa', text: 'United States' },
+      { itemId: 'india', text: 'India' },
+      { itemId: 'brazil', text: 'Brazil' },
     ],
+    correctOrder: ['china', 'india', 'usa', 'brazil'],
   },
   {
     questionId: 'flag6',
-    questionType: 'multiple-choice',
-    questionText: 'Which country does this flag belong to?',
-    imageId: 'https://flagcdn.com/w320/ca.png',
-    options: [
-      { optionId: 'flag6-optA', text: 'Canada', isCorrect: true },
-      { optionId: 'flag6-optB', text: 'United States', isCorrect: false },
-      { optionId: 'flag6-optC', text: 'Poland', isCorrect: false },
-      { optionId: 'flag6-optD', text: 'Lebanon', isCorrect: false },
-    ],
+    questionType: 'type-answer',
+    questionText: 'What country is known for its maple leaf flag?',
+    correctAnswers: ['canada', 'Canada'],
+    caseSensitive: false,
   },
   {
     questionId: 'flag7',
     questionType: 'multiple-choice',
     questionText: 'Which country does this flag belong to?',
-    imageId: 'https://flagcdn.com/w320/in.png',
+    imageId: 'https://flagcdn.com/w320/de.png',
     options: [
-      { optionId: 'flag7-optA', text: 'Pakistan', isCorrect: false },
-      { optionId: 'flag7-optB', text: 'India', isCorrect: true },
-      { optionId: 'flag7-optC', text: 'Bangladesh', isCorrect: false },
-      { optionId: 'flag7-optD', text: 'Sri Lanka', isCorrect: false },
+      { optionId: 'flag7-optA', text: 'Belgium', isCorrect: false },
+      { optionId: 'flag7-optB', text: 'Germany', isCorrect: true },
+      { optionId: 'flag7-optC', text: 'Austria', isCorrect: false },
+      { optionId: 'flag7-optD', text: 'Netherlands', isCorrect: false },
     ],
   },
   {
     questionId: 'flag8',
-    questionType: 'multiple-choice',
-    questionText: 'Which country does this flag belong to?',
-    imageId: 'https://flagcdn.com/w320/au.png',
-    options: [
-      { optionId: 'flag8-optA', text: 'New Zealand', isCorrect: false },
-      { optionId: 'flag8-optB', text: 'Australia', isCorrect: true },
-      { optionId: 'flag8-optC', text: 'United Kingdom', isCorrect: false },
-      { optionId: 'flag8-optD', text: 'Fiji', isCorrect: false },
-    ],
+    questionType: 'pinpoint',
+    questionText: 'Click on Brazil on this map of South America.',
+    imageId: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop',
+    correctLocation: { x: 0.65, y: 0.4 },
+    tolerance: 0.25,
+    pinpointInstructions: 'Brazil is the largest country in South America, located in the central-eastern part of the continent.',
   },
   {
     questionId: 'flag9',
     questionType: 'multiple-choice',
     questionText: 'Which country does this flag belong to?',
-    imageId: 'https://flagcdn.com/w320/mx.png',
+    imageId: 'https://flagcdn.com/w320/br.png',
     options: [
-      { optionId: 'flag9-optA', text: 'Italy', isCorrect: false },
-      { optionId: 'flag9-optB', text: 'Mexico', isCorrect: true },
-      { optionId: 'flag9-optC', text: 'Ireland', isCorrect: false },
-      { optionId: 'flag9-optD', text: 'Hungary', isCorrect: false },
+      { optionId: 'flag9-optA', text: 'Argentina', isCorrect: false },
+      { optionId: 'flag9-optB', text: 'Brazil', isCorrect: true },
+      { optionId: 'flag9-optC', text: 'Colombia', isCorrect: false },
+      { optionId: 'flag9-optD', text: 'Venezuela', isCorrect: false },
     ],
   },
   {
     questionId: 'flag10',
-    questionType: 'multiple-choice',
-    questionText: 'Which country does this flag belong to?',
-    imageId: 'https://flagcdn.com/w320/gb.png',
+    questionType: 'checkboxes',
+    questionText: 'Which of these countries are located in Europe?',
     options: [
-      { optionId: 'flag10-optA', text: 'United Kingdom', isCorrect: true },
-      { optionId: 'flag10-optB', text: 'United States', isCorrect: false },
-      { optionId: 'flag10-optC', text: 'Australia', isCorrect: false },
-      { optionId: 'flag10-optD', text: 'New Zealand', isCorrect: false },
+      { optionId: 'flag10-optA', text: 'Germany', isCorrect: true },
+      { optionId: 'flag10-optB', text: 'Brazil', isCorrect: false },
+      { optionId: 'flag10-optC', text: 'France', isCorrect: true },
+      { optionId: 'flag10-optD', text: 'Japan', isCorrect: false },
+      { optionId: 'flag10-optE', text: 'Italy', isCorrect: true },
     ],
+  },
+  // Mixed quiz questions combining different types
+  {
+    questionId: 'mixed1',
+    questionType: 'multiple-choice',
+    questionText: 'Which car brand does this logo belong to?',
+    imageId: 'https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg',
+    options: [
+      { optionId: 'mixed1-optA', text: 'Mercedes-Benz', isCorrect: false },
+      { optionId: 'mixed1-optB', text: 'BMW', isCorrect: true },
+      { optionId: 'mixed1-optC', text: 'Audi', isCorrect: false },
+      { optionId: 'mixed1-optD', text: 'Volkswagen', isCorrect: false },
+    ],
+  },
+  {
+    questionId: 'mixed2',
+    questionType: 'type-answer',
+    questionText: 'What is the capital of France?',
+    correctAnswers: ['paris', 'Paris'],
+    caseSensitive: false,
+  },
+  {
+    questionId: 'mixed3',
+    questionType: 'checkboxes',
+    questionText: 'Which of these are programming languages?',
+    options: [
+      { optionId: 'mixed3-optA', text: 'JavaScript', isCorrect: true },
+      { optionId: 'mixed3-optB', text: 'HTML', isCorrect: false },
+      { optionId: 'mixed3-optC', text: 'Python', isCorrect: true },
+      { optionId: 'mixed3-optD', text: 'CSS', isCorrect: false },
+      { optionId: 'mixed3-optE', text: 'Java', isCorrect: true },
+    ],
+  },
+  {
+    questionId: 'mixed4',
+    questionType: 'pinpoint',
+    questionText: 'Click on the apple with the most visible stem.',
+    imageId: 'https://quiz-wfun.onrender.com/images/apples.jpg',
+    correctLocation: { x: 0.3, y: 0.5 },
+    tolerance: 0.15,
+    pinpointInstructions: 'Look carefully at each apple and identify which one has the most visible stem. Click precisely on that apple.',
+  },
+  {
+    questionId: 'mixed5',
+    questionType: 'range',
+    questionText: 'On a scale of 1-10, how difficult is this quiz so far?',
+    minValue: 1,
+    maxValue: 10,
+    correctAnswer: 5,
+    tolerance: 2,
   },
 ];
 
+// Fisher-Yates shuffle algorithm
+function shuffleArray(array) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
 
 app.get('/api/quiz-types', (req, res) => {
   const quizTypes = [
@@ -392,10 +419,10 @@ app.get('/api/quiz-types', (req, res) => {
     { id: 'checkboxes', name: 'Checkboxes', description: 'Multiple correct answers', icon: '☑️' },
     { id: 'reorder', name: 'Reorder', description: 'Place answers in the correct order', icon: '📋' },
     { id: 'range', name: 'Range', description: 'Guess the answer on a scale', icon: '📊' },
-
     { id: 'pinpoint', name: 'Pinpoint', description: 'Pin the answer on an image', icon: '🎯' },
     { id: 'type-answer', name: 'Type answer', description: 'Type the correct answer', icon: '⌨️' },
     { id: 'real-world-map', name: 'Real World Map', description: 'Geographical questions on real maps', icon: '🗺️' },
+    { id: 'mixed', name: 'Mixed Quiz', description: 'Combination of different question types', icon: '🎲' },
   ];
   res.json(quizTypes);
 });
@@ -414,13 +441,17 @@ app.get('/api/quiz/:questionId', (req, res) => {
       optionId,
       text,
     }));
-    dataForFrontend = { ...questionRecord, options: sanitizedOptions };
+    // Shuffle options randomly
+    const shuffledOptions = shuffleArray(sanitizedOptions);
+    dataForFrontend = { ...questionRecord, options: shuffledOptions };
   } else if (questionRecord.questionType === 'reorder') {
+    // Shuffle items for reorder questions too
+    const shuffledItems = shuffleArray(questionRecord.items);
     dataForFrontend = {
       questionId: questionRecord.questionId,
       questionType: questionRecord.questionType,
       questionText: questionRecord.questionText,
-      items: questionRecord.items,
+      items: shuffledItems,
     };
   } else if (questionRecord.questionType === 'range') {
     dataForFrontend = {
@@ -465,10 +496,47 @@ app.get('/api/quiz/:questionId', (req, res) => {
   res.json(dataForFrontend);
 });
 
+// New endpoint for mixed quiz questions
+app.get('/api/mixed-quiz', (req, res) => {
+  // Shuffle the mixed quiz questions
+  const shuffledQuestions = shuffleArray(quizDatabase);
+  
+  // Process each question to remove answer keys and shuffle options
+  const processedQuestions = shuffledQuestions.map(question => {
+    let processedQuestion = { ...question };
+    
+    if (question.questionType === 'multiple-choice' || question.questionType === 'checkboxes') {
+      const sanitizedOptions = question.options.map(({ optionId, text }) => ({
+        optionId,
+        text,
+      }));
+      const shuffledOptions = shuffleArray(sanitizedOptions);
+      processedQuestion.options = shuffledOptions;
+    }
+    
+    // Remove answer keys
+    delete processedQuestion.correctOrder;
+    delete processedQuestion.correctAnswer;
+    delete processedQuestion.correctAnswers;
+    delete processedQuestion.correctLocation;
+    delete processedQuestion.tolerance;
+    delete processedQuestion.caseSensitive;
+    
+    return processedQuestion;
+  });
+  
+  res.json(processedQuestions);
+});
+
 app.post('/api/quiz/check-answer', (req, res) => {
   const { questionId, answer } = req.body;
 
-  const questionRecord = quizDatabase.find((q) => q.questionId === questionId);
+  // Search in both regular quiz database and mixed quiz database
+  let questionRecord = quizDatabase.find((q) => q.questionId === questionId);
+  if (!questionRecord) {
+    questionRecord = quizDatabase.find((q) => q.questionId === questionId);
+  }
+  
   if (!questionRecord) {
     return res.status(404).json({ message: 'Question not found' });
   }
@@ -547,23 +615,29 @@ app.post('/api/quiz/check-answer', (req, res) => {
     const response = { result: 'incorrect' };
     
     if (questionRecord.questionType === 'multiple-choice') {
-      response.correctOptionId = questionRecord.options.find(opt => opt.isCorrect).optionId;
+      const correctOption = questionRecord.options.find(opt => opt.isCorrect);
+      response.correctOptionId = correctOption.optionId;
+      response.correctAnswer = correctOption.text;
     } else if (questionRecord.questionType === 'checkboxes') {
-      response.correctOptionIds = questionRecord.options
-        .filter(opt => opt.isCorrect)
-        .map(opt => opt.optionId);
+      const correctOptions = questionRecord.options.filter(opt => opt.isCorrect);
+      response.correctOptionIds = correctOptions.map(opt => opt.optionId);
+      response.correctAnswer = correctOptions.map(opt => opt.text).join(', ');
     } else if (questionRecord.questionType === 'reorder') {
       response.correctOrder = questionRecord.correctOrder;
+      response.correctAnswer = questionRecord.correctOrder.join(' → ');
     } else if (questionRecord.questionType === 'range') {
       response.correctAnswer = questionRecord.correctAnswer;
       response.tolerance = questionRecord.tolerance;
     } else if (questionRecord.questionType === 'pinpoint') {
       response.correctLocation = questionRecord.correctLocation;
+      response.correctAnswer = `X: ${questionRecord.correctLocation.x}, Y: ${questionRecord.correctLocation.y}`;
     } else if (questionRecord.questionType === 'type-answer') {
       response.correctAnswers = questionRecord.correctAnswers;
+      response.correctAnswer = questionRecord.correctAnswers[0];
     } else if (questionRecord.questionType === 'real-world-map') {
       response.correctLocation = questionRecord.mapConfig.correctLocation;
       response.tolerance = questionRecord.mapConfig.tolerance;
+      response.correctAnswer = `X: ${questionRecord.mapConfig.correctLocation.x}, Y: ${questionRecord.mapConfig.correctLocation.y}`;
     }
     
     res.json(response);

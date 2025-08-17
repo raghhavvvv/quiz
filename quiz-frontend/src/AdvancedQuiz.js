@@ -5,6 +5,53 @@ import './AdvancedQuiz.css';
 
 const API_URL = "https://quiz-wfun.onrender.com";
 
+// Simple confetti animation function
+const createConfetti = () => {
+  const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#ffeaa7', '#dda0dd', '#98d8c8'];
+  const confettiCount = 50;
+  
+  for (let i = 0; i < confettiCount; i++) {
+    const confetti = document.createElement('div');
+    confetti.style.position = 'fixed';
+    confetti.style.left = Math.random() * 100 + 'vw';
+    confetti.style.top = '-10px';
+    confetti.style.width = '10px';
+    confetti.style.height = '10px';
+    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    confetti.style.borderRadius = '50%';
+    confetti.style.pointerEvents = 'none';
+    confetti.style.zIndex = '9999';
+    confetti.style.animation = `confetti-fall ${Math.random() * 2 + 2}s linear forwards`;
+    
+    document.body.appendChild(confetti);
+    
+    setTimeout(() => {
+      confetti.remove();
+    }, 4000);
+  }
+};
+
+// Add CSS animation for confetti
+const addConfettiStyles = () => {
+  if (!document.getElementById('confetti-styles')) {
+    const style = document.createElement('style');
+    style.id = 'confetti-styles';
+    style.textContent = `
+      @keyframes confetti-fall {
+        0% {
+          transform: translateY(-10px) rotate(0deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(100vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+};
+
 function AdvancedQuiz({ questionId, onBack }) {
   const [question, setQuestion] = useState(null);
   const [selectedAnswers, setSelectedAnswers] = useState({});
@@ -13,6 +60,8 @@ function AdvancedQuiz({ questionId, onBack }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    addConfettiStyles();
+    
     fetch(`${API_URL}/api/quiz/${questionId}`)
       .then((res) => res.json())
       .then((data) => {
@@ -251,6 +300,8 @@ function AdvancedQuiz({ questionId, onBack }) {
         setResult(data);
         if (data.result === 'correct') {
           setScore(prevScore => prevScore + 1);
+          // Trigger confetti animation for correct answers
+          createConfetti();
         }
       })
       .catch((err) => console.error('Failed to check answer:', err));
