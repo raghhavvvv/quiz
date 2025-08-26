@@ -6,17 +6,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #f0f2f5;
   color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   margin: 0;
+  padding: 0;
 }
 
 .App {
   text-align: center;
   width: 100%;
-  max-width: 600px;
 }
 
 .quiz-container {
