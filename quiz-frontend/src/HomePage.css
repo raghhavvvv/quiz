@@ -81,18 +81,83 @@
 @media (max-width: 768px) {
   .home-page {
     padding: 1rem;
+    justify-content: flex-start;
+    padding-top: 2rem;
+  }
+  
+  .home-header {
+    margin-bottom: 2rem;
   }
   
   .home-header h1 {
     font-size: 2.5rem;
   }
   
+  .home-header p {
+    font-size: 1.1rem;
+  }
+  
   .quiz-options {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    max-width: 400px;
   }
   
   .quiz-option {
     padding: 1.5rem;
+  }
+  
+  .option-icon {
+    font-size: 2.5rem;
+  }
+  
+  .quiz-option h2 {
+    font-size: 1.3rem;
+  }
+  
+  .quiz-option p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page {
+    padding: 0.5rem;
+    padding-top: 1.5rem;
+  }
+  
+  .home-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .home-header h1 {
+    font-size: 2rem;
+  }
+  
+  .home-header p {
+    font-size: 1rem;
+  }
+  
+  .quiz-options {
+    gap: 1rem;
+    max-width: 100%;
+  }
+  
+  .quiz-option {
+    padding: 1.25rem;
+  }
+  
+  .option-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .quiz-option h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .quiz-option p {
+    font-size: 0.9rem;
   }
 }
