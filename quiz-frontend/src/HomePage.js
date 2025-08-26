@@ -22,6 +22,12 @@ function HomePage({ onNavigate }) {
           <p>Identify flags from around the world in 10 questions</p>
         </div>
 
+        <div className="quiz-option" onClick={() => onNavigate('ganesh-chaturthi')}>
+          <div className="option-icon">🐘</div>
+          <h2>Ganesh Chaturthi Quiz</h2>
+          <p>Test your knowledge about Lord Ganesha and the festival</p>
+        </div>
+
         <div className="quiz-option" onClick={() => onNavigate('quiz-selector')}>
           <div className="option-icon">🎯</div>
           <h2>Advanced Quizzes</h2>
