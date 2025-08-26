@@ -406,7 +406,7 @@ const quizDatabase = [
     questionId: 'ganesh1',
     questionType: 'multiple-choice',
     questionText: 'What is the name of Lord Ganesha\'s vehicle?',
-    imageId: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400',
+    imageId: 'https://images.unsplash.com/photo-1567591391293-f9a99c77e128?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     options: [
       { optionId: 'ganesh1-optA', text: 'Mouse', isCorrect: true },
       { optionId: 'ganesh1-optB', text: 'Elephant', isCorrect: false },
