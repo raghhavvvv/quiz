@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5001;
 const corsOptions = {
   origin: [
     'http://localhost:3000', // For local development
-    'https://quiz-theta-henna.vercel.app', // Frontend Vercel URL
+    'https://any2quiz.vercel.app', // Frontend Vercel URL
   ],
   credentials: true,
   optionsSuccessStatus: 200
