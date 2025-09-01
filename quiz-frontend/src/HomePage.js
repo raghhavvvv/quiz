@@ -28,6 +28,12 @@ function HomePage({ onNavigate }) {
           <p>Test your knowledge about Lord Ganesha and the festival</p>
         </div>
 
+        <div className="quiz-option" onClick={() => onNavigate('teachers-day')}>
+          <div className="option-icon">📚</div>
+          <h2>Teacher's Day Quiz</h2>
+          <p>Celebrate teachers with 30 questions about education and great educators</p>
+        </div>
+
         <div className="quiz-option" onClick={() => onNavigate('quiz-selector')}>
           <div className="option-icon">🎯</div>
           <h2>Advanced Quizzes</h2>
@@ -37,5 +43,6 @@ function HomePage({ onNavigate }) {
     </div>
   );
 }
+
 
 export default HomePage;

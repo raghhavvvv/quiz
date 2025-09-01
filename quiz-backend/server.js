@@ -504,6 +504,333 @@ const quizDatabase = [
     correctAnswers: ['modak', 'Modak', 'MODAK'],
     caseSensitive: false,
   },
+  // Teacher's Day Quiz Questions
+  {
+    questionId: 'td1',
+    questionType: 'multiple-choice',
+    questionText: 'When is Teacher\'s Day celebrated in India?',
+    imageId: '',
+    options: [
+      { optionId: 'td1-optA', text: '5th September', isCorrect: true },
+      { optionId: 'td1-optB', text: '14th November', isCorrect: false },
+      { optionId: 'td1-optC', text: '15th August', isCorrect: false },
+      { optionId: 'td1-optD', text: '2nd October', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td2',
+    questionType: 'multiple-choice',
+    questionText: 'Teacher\'s Day in India marks the birthday of which great leader?',
+    imageId: '',
+    options: [
+      { optionId: 'td2-optA', text: 'Mahatma Gandhi', isCorrect: false },
+      { optionId: 'td2-optB', text: 'Dr. Sarvepalli Radhakrishnan', isCorrect: true },
+      { optionId: 'td2-optC', text: 'Jawaharlal Nehru', isCorrect: false },
+      { optionId: 'td2-optD', text: 'Swami Vivekananda', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td3',
+    questionType: 'type-answer',
+    questionText: 'Dr. Sarvepalli Radhakrishnan was the ___ President of India.',
+    correctAnswers: ['2nd', 'second', 'Second'],
+    caseSensitive: false,
+  },
+  {
+    questionId: 'td4',
+    questionType: 'multiple-choice',
+    questionText: 'Which year was the first Teacher\'s Day celebrated in India?',
+    imageId: '',
+    options: [
+      { optionId: 'td4-optA', text: '1962', isCorrect: true },
+      { optionId: 'td4-optB', text: '1950', isCorrect: false },
+      { optionId: 'td4-optC', text: '1970', isCorrect: false },
+      { optionId: 'td4-optD', text: '1980', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td5',
+    questionType: 'checkboxes',
+    questionText: 'Which of the following are famous Indian teachers and philosophers?',
+    imageId: '',
+    options: [
+      { optionId: 'td5-optA', text: 'Chanakya', isCorrect: true },
+      { optionId: 'td5-optB', text: 'Savitribai Phule', isCorrect: true },
+      { optionId: 'td5-optC', text: 'Dr. A.P.J. Abdul Kalam', isCorrect: true },
+      { optionId: 'td5-optD', text: 'Sachin Tendulkar', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td6',
+    questionType: 'reorder',
+    questionText: 'Arrange the following in chronological order of their birth: Dr. Radhakrishnan, A.P.J. Abdul Kalam, Savitribai Phule, Swami Vivekananda',
+    items: [
+      { itemId: 'td6-optA', text: 'Savitribai Phule' },
+      { itemId: 'td6-optB', text: 'Swami Vivekananda' },
+      { itemId: 'td6-optC', text: 'Dr. Sarvepalli Radhakrishnan' },
+      { itemId: 'td6-optD', text: 'Dr. A.P.J. Abdul Kalam' }
+    ],
+    correctOrder: ['td6-optA', 'td6-optB', 'td6-optC', 'td6-optD'],
+  },
+  {
+    questionId: 'td7',
+    questionType: 'multiple-choice',
+    questionText: 'Which subject did Dr. Sarvepalli Radhakrishnan primarily teach?',
+    imageId: '',
+    options: [
+      { optionId: 'td7-optA', text: 'Physics', isCorrect: false },
+      { optionId: 'td7-optB', text: 'Philosophy', isCorrect: true },
+      { optionId: 'td7-optC', text: 'History', isCorrect: false },
+      { optionId: 'td7-optD', text: 'Mathematics', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td8',
+    questionType: 'multiple-choice',
+    questionText: 'Who is regarded as the first female teacher of India?',
+    imageId: '',
+    options: [
+      { optionId: 'td8-optA', text: 'Anandibai Joshi', isCorrect: false },
+      { optionId: 'td8-optB', text: 'Savitribai Phule', isCorrect: true },
+      { optionId: 'td8-optC', text: 'Indira Gandhi', isCorrect: false },
+      { optionId: 'td8-optD', text: 'Mother Teresa', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td9',
+    questionType: 'type-answer',
+    questionText: 'Teachers are often called the ___ of the nation.',
+    correctAnswers: ['nation builders', 'builders', 'backbone'],
+    caseSensitive: false,
+  },
+  {
+    questionId: 'td10',
+    questionType: 'multiple-choice',
+    questionText: 'Which of the following dates is celebrated as World Teachers\' Day (global)?',
+    imageId: '',
+    options: [
+      { optionId: 'td10-optA', text: '5th October', isCorrect: true },
+      { optionId: 'td10-optB', text: '5th September', isCorrect: false },
+      { optionId: 'td10-optC', text: '14th November', isCorrect: false },
+      { optionId: 'td10-optD', text: '1st May', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td11',
+    questionType: 'multiple-choice',
+    questionText: 'Which famous teacher was the mentor of Chandragupta Maurya?',
+    imageId: '',
+    options: [
+      { optionId: 'td11-optA', text: 'Chanakya', isCorrect: true },
+      { optionId: 'td11-optB', text: 'Valmiki', isCorrect: false },
+      { optionId: 'td11-optC', text: 'Vishwamitra', isCorrect: false },
+      { optionId: 'td11-optD', text: 'Aryabhata', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td12',
+    questionType: 'multiple-choice',
+    questionText: 'Which organization leads the celebration of World Teachers\' Day?',
+    imageId: '',
+    options: [
+      { optionId: 'td12-optA', text: 'UNESCO', isCorrect: true },
+      { optionId: 'td12-optB', text: 'UNICEF', isCorrect: false },
+      { optionId: 'td12-optC', text: 'WHO', isCorrect: false },
+      { optionId: 'td12-optD', text: 'IMF', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td13',
+    questionType: 'type-answer',
+    questionText: 'The motto of a true teacher is to ___ knowledge.',
+    correctAnswers: ['impart', 'share', 'spread', 'give'],
+    caseSensitive: false,
+  },
+  {
+    questionId: 'td14',
+    questionType: 'checkboxes',
+    questionText: 'Which qualities should a good teacher have?',
+    imageId: '',
+    options: [
+      { optionId: 'td14-optA', text: 'Patience', isCorrect: true },
+      { optionId: 'td14-optB', text: 'Creativity', isCorrect: true },
+      { optionId: 'td14-optC', text: 'Arrogance', isCorrect: false },
+      { optionId: 'td14-optD', text: 'Empathy', isCorrect: true }
+    ],
+  },
+  {
+    questionId: 'td15',
+    questionType: 'multiple-choice',
+    questionText: 'Which great scientist is often called the \'Missile Man of India\' and was also a teacher?',
+    imageId: '',
+    options: [
+      { optionId: 'td15-optA', text: 'C.V. Raman', isCorrect: false },
+      { optionId: 'td15-optB', text: 'Dr. A.P.J. Abdul Kalam', isCorrect: true },
+      { optionId: 'td15-optC', text: 'Homi Bhabha', isCorrect: false },
+      { optionId: 'td15-optD', text: 'Vikram Sarabhai', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td16',
+    questionType: 'multiple-choice',
+    questionText: 'What is the traditional Indian word for teacher?',
+    imageId: '',
+    options: [
+      { optionId: 'td16-optA', text: 'Guru', isCorrect: true },
+      { optionId: 'td16-optB', text: 'Shishya', isCorrect: false },
+      { optionId: 'td16-optC', text: 'Pandit', isCorrect: false },
+      { optionId: 'td16-optD', text: 'Acharya', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td17',
+    questionType: 'reorder',
+    questionText: 'Arrange the stages of effective learning in the correct order: Listening, Reflection, Practice',
+    items: [
+      { itemId: 'td17-optA', text: 'Listening' },
+      { itemId: 'td17-optB', text: 'Reflection' },
+      { itemId: 'td17-optC', text: 'Practice' }
+    ],
+    correctOrder: ['td17-optA', 'td17-optB', 'td17-optC'],
+  },
+  {
+    questionId: 'td18',
+    questionType: 'type-answer',
+    questionText: 'Teachers light the ___ of knowledge in students\' lives.',
+    correctAnswers: ['lamp', 'flame', 'light', 'candle'],
+    caseSensitive: false,
+  },
+  {
+    questionId: 'td19',
+    questionType: 'multiple-choice',
+    questionText: 'Who was the teacher of the Kauravas and Pandavas in the Mahabharata?',
+    imageId: '',
+    options: [
+      { optionId: 'td19-optA', text: 'Dronacharya', isCorrect: true },
+      { optionId: 'td19-optB', text: 'Vashishtha', isCorrect: false },
+      { optionId: 'td19-optC', text: 'Chanakya', isCorrect: false },
+      { optionId: 'td19-optD', text: 'Kripacharya', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td20',
+    questionType: 'checkboxes',
+    questionText: 'Which of the following are globally respected teachers?',
+    imageId: '',
+    options: [
+      { optionId: 'td20-optA', text: 'Confucius', isCorrect: true },
+      { optionId: 'td20-optB', text: 'Aristotle', isCorrect: true },
+      { optionId: 'td20-optC', text: 'Albert Einstein', isCorrect: true },
+      { optionId: 'td20-optD', text: 'Bill Gates', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td21',
+    questionType: 'multiple-choice',
+    questionText: 'Who was the family guru (kulaguru) of Lord Rama?',
+    imageId: '',
+    options: [
+      { optionId: 'td21-optA', text: 'Vashishtha', isCorrect: true },
+      { optionId: 'td21-optB', text: 'Vishwamitra', isCorrect: false },
+      { optionId: 'td21-optC', text: 'Dronacharya', isCorrect: false },
+      { optionId: 'td21-optD', text: 'Parashurama', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td22',
+    questionType: 'multiple-choice',
+    questionText: 'Who said: "Teachers should be the best minds in the country"?',
+    imageId: '',
+    options: [
+      { optionId: 'td22-optA', text: 'Dr. Sarvepalli Radhakrishnan', isCorrect: true },
+      { optionId: 'td22-optB', text: 'Mahatma Gandhi', isCorrect: false },
+      { optionId: 'td22-optC', text: 'A.P.J. Abdul Kalam', isCorrect: false },
+      { optionId: 'td22-optD', text: 'Swami Vivekananda', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td23',
+    questionType: 'type-answer',
+    questionText: 'The ___ tradition in India shows deep respect for teachers.',
+    correctAnswers: ['Guru-Shishya', 'Guru Shishya', 'guru-shishya', 'guru shishya'],
+    caseSensitive: false,
+  },
+  {
+    questionId: 'td24',
+    questionType: 'checkboxes',
+    questionText: 'Which of these modern personalities also worked as teachers?',
+    imageId: '',
+    options: [
+      { optionId: 'td24-optA', text: 'J.K. Rowling', isCorrect: true },
+      { optionId: 'td24-optB', text: 'Barack Obama', isCorrect: true },
+      { optionId: 'td24-optC', text: 'Mother Teresa', isCorrect: true },
+      { optionId: 'td24-optD', text: 'Nelson Mandela', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td25',
+    questionType: 'multiple-choice',
+    questionText: 'In which year was World Teachers\' Day established by UNESCO?',
+    imageId: '',
+    options: [
+      { optionId: 'td25-optA', text: '1994', isCorrect: true },
+      { optionId: 'td25-optB', text: '1975', isCorrect: false },
+      { optionId: 'td25-optC', text: '2000', isCorrect: false },
+      { optionId: 'td25-optD', text: '1987', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td26',
+    questionType: 'multiple-choice',
+    questionText: 'Which Indian President is fondly known as the \'Teacher President\'?',
+    imageId: '',
+    options: [
+      { optionId: 'td26-optA', text: 'Dr. Sarvepalli Radhakrishnan', isCorrect: true },
+      { optionId: 'td26-optB', text: 'Rajendra Prasad', isCorrect: false },
+      { optionId: 'td26-optC', text: 'Dr. A.P.J. Abdul Kalam', isCorrect: false },
+      { optionId: 'td26-optD', text: 'Dr. Zakir Husain', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td27',
+    questionType: 'type-answer',
+    questionText: 'A teacher takes a hand, opens a mind, and ___ a heart.',
+    correctAnswers: ['touches', 'touch', 'warms', 'moves'],
+    caseSensitive: false,
+  },
+  {
+    questionId: 'td28',
+    questionType: 'multiple-choice',
+    questionText: 'Which teacher from Greek philosophy was the mentor of Alexander the Great?',
+    imageId: '',
+    options: [
+      { optionId: 'td28-optA', text: 'Plato', isCorrect: false },
+      { optionId: 'td28-optB', text: 'Aristotle', isCorrect: true },
+      { optionId: 'td28-optC', text: 'Socrates', isCorrect: false },
+      { optionId: 'td28-optD', text: 'Confucius', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td29',
+    questionType: 'checkboxes',
+    questionText: 'Which activities are commonly organized in schools on Teacher\'s Day?',
+    imageId: '',
+    options: [
+      { optionId: 'td29-optA', text: 'Cultural programs', isCorrect: true },
+      { optionId: 'td29-optB', text: 'Sports competitions', isCorrect: true },
+      { optionId: 'td29-optC', text: 'Students acting as teachers', isCorrect: true },
+      { optionId: 'td29-optD', text: 'National holiday parade', isCorrect: false }
+    ],
+  },
+  {
+    questionId: 'td30',
+    questionType: 'pinpoint',
+    questionText: 'Pinpoint India on the map where Teacher\'s Day on 5th September is celebrated.',
+    imageId: 'https://upload.wikimedia.org/wikipedia/commons/3/38/India_map.png',
+    correctLocation: { x: 0.5, y: 0.5 },
+    tolerance: 0.2,
+    pinpointInstructions: 'Click on India on the map to identify where Teacher\'s Day is celebrated on September 5th.',
+  },
 ];
 
 // Fisher-Yates shuffle algorithm

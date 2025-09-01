@@ -6,10 +6,11 @@ import MixedQuiz from './MixedQuiz';
 import CarLogoQuiz from './CarLogoQuiz';
 import CountryFlagQuiz from './CountryFlagQuiz';
 import GaneshChaturthiQuiz from './GaneshChaturthiQuiz';
+import TeachersDayQuiz from './TeachersDayQuiz';
 import './App.css';
 
 function App() {
-  const [currentView, setCurrentView] = useState('home'); // 'home', 'car-logos', 'country-flags', 'ganesh-chaturthi', 'quiz-selector', 'advanced-quiz', or 'mixed-quiz'
+  const [currentView, setCurrentView] = useState('home'); // 'home', 'car-logos', 'country-flags', 'ganesh-chaturthi', 'teachers-day', 'quiz-selector', 'advanced-quiz', or 'mixed-quiz'
   const [selectedQuizType, setSelectedQuizType] = useState(null);
   const [selectedQuestionId, setSelectedQuestionId] = useState(null);
 
@@ -70,6 +71,10 @@ function App() {
       
       {currentView === 'ganesh-chaturthi' && (
         <GaneshChaturthiQuiz onBack={handleBackToHome} />
+      )}
+      
+      {currentView === 'teachers-day' && (
+        <TeachersDayQuiz onBack={handleBackToHome} />
       )}
       
       {currentView === 'quiz-selector' && (
