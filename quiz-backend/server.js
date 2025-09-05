@@ -521,7 +521,7 @@ const quizDatabase = [
     questionId: 'td2',
     questionType: 'multiple-choice',
     questionText: 'Who is this great educator and philosopher whose birthday is celebrated as Teacher\'s Day in India?',
-    imageId: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Sarvepalli_Radhakrishnan.jpg/400px-Sarvepalli_Radhakrishnan.jpg',
+    imageId: '/radhakrishnan.jpg',
     options: [
       { optionId: 'td2-optA', text: 'Mahatma Gandhi', isCorrect: false },
       { optionId: 'td2-optB', text: 'Dr. Sarvepalli Radhakrishnan', isCorrect: true },
@@ -588,7 +588,7 @@ const quizDatabase = [
     questionId: 'td8',
     questionType: 'multiple-choice',
     questionText: 'Who is this pioneering woman, regarded as the first female teacher of India?',
-    imageId: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Savitribai_Phule.jpg/400px-Savitribai_Phule.jpg',
+    imageId: '/savitribai.png',
     options: [
       { optionId: 'td8-optA', text: 'Anandibai Joshi', isCorrect: false },
       { optionId: 'td8-optB', text: 'Savitribai Phule', isCorrect: true },
@@ -619,7 +619,7 @@ const quizDatabase = [
     questionId: 'td11',
     questionType: 'multiple-choice',
     questionText: 'Identify this ancient Indian teacher and strategist, mentor of Chandragupta Maurya.',
-    imageId: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Chanakya_artistic_depiction.jpg/400px-Chanakya_artistic_depiction.jpg',
+    imageId: '/chanakya.jpg',
     options: [
       { optionId: 'td11-optA', text: 'Chanakya', isCorrect: true },
       { optionId: 'td11-optB', text: 'Valmiki', isCorrect: false },
@@ -662,7 +662,7 @@ const quizDatabase = [
     questionId: 'td15',
     questionType: 'multiple-choice',
     questionText: 'Who is this great scientist, often called the \'Missile Man of India\' and beloved teacher?',
-    imageId: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/A._P._J._Abdul_Kalam.jpg/400px-A._P._J._Abdul_Kalam.jpg',
+    imageId: '/abdulkalam.jpg',
     options: [
       { optionId: 'td15-optA', text: 'C.V. Raman', isCorrect: false },
       { optionId: 'td15-optB', text: 'Dr. A.P.J. Abdul Kalam', isCorrect: true },
@@ -802,7 +802,7 @@ const quizDatabase = [
     questionId: 'td28',
     questionType: 'multiple-choice',
     questionText: 'Who is this ancient Greek philosopher and teacher, mentor of Alexander the Great?',
-    imageId: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Aristotle_Altemps_Inv8575.jpg/400px-Aristotle_Altemps_Inv8575.jpg',
+    imageId: '/aristotle.jpg',
     options: [
       { optionId: 'td28-optA', text: 'Plato', isCorrect: false },
       { optionId: 'td28-optB', text: 'Aristotle', isCorrect: true },
