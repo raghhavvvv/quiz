@@ -5,39 +5,48 @@ function HomePage({ onNavigate }) {
   return (
     <div className="home-page">
       <div className="home-header">
-        <h1>QUIZ.com</h1>
-        <p>Choose your quiz adventure</p>
+        <h1>any2quiz.com</h1>
+        <p>Celebrating Teachers & Education</p>
       </div>
 
-      <div className="quiz-options">
-        <div className="quiz-option" onClick={() => onNavigate('car-logos')}>
-          <div className="option-icon">🚗</div>
-          <h2>Car Logo Quiz</h2>
-          <p>Test your knowledge of car brands with 10 logo questions</p>
+      {/* Featured Teacher's Day Quiz */}
+      <div className="featured-quiz">
+        <div className="featured-quiz-card" onClick={() => onNavigate('teachers-day')}>
+          <div className="featured-icon">📚</div>
+          <h2>Teacher's Day Special Quiz</h2>
+          <p>Celebrate the educators who shape our world with 30 comprehensive questions covering Indian and global teacher history, philosophy, and educational traditions.</p>
+          <div className="quiz-stats">
+            <span className="stat">📊 30 Questions</span>
+            <span className="stat">🏆 Multiple Formats</span>
+            <span className="stat">🎯 Educational Focus</span>
+          </div>
+          <button className="start-button">Start Teacher's Day Quiz →</button>
         </div>
+      </div>
 
-        <div className="quiz-option" onClick={() => onNavigate('country-flags')}>
-          <div className="option-icon">🏳️</div>
-          <h2>Country Flag Quiz</h2>
-          <p>Identify flags from around the world in 10 questions</p>
-        </div>
+      {/* Other Quizzes */}
+      <div className="other-quizzes">
+        <h3>Other Available Quizzes</h3>
+        <div className="quiz-options-small">
+          <div className="quiz-option-small" onClick={() => onNavigate('ganesh-chaturthi')}>
+            <div className="option-icon-small">🐘</div>
+            <span>Ganesh Chaturthi</span>
+          </div>
 
-        <div className="quiz-option" onClick={() => onNavigate('ganesh-chaturthi')}>
-          <div className="option-icon">🐘</div>
-          <h2>Ganesh Chaturthi Quiz</h2>
-          <p>Test your knowledge about Lord Ganesha and the festival</p>
-        </div>
+          <div className="quiz-option-small" onClick={() => onNavigate('car-logos')}>
+            <div className="option-icon-small">🚗</div>
+            <span>Car Logos</span>
+          </div>
 
-        <div className="quiz-option" onClick={() => onNavigate('teachers-day')}>
-          <div className="option-icon">📚</div>
-          <h2>Teacher's Day Quiz</h2>
-          <p>Celebrate teachers with 30 questions about education and great educators</p>
-        </div>
+          <div className="quiz-option-small" onClick={() => onNavigate('country-flags')}>
+            <div className="option-icon-small">🏳️</div>
+            <span>Country Flags</span>
+          </div>
 
-        <div className="quiz-option" onClick={() => onNavigate('quiz-selector')}>
-          <div className="option-icon">🎯</div>
-          <h2>Advanced Quizzes</h2>
-          <p>Explore different question types and formats</p>
+          <div className="quiz-option-small" onClick={() => onNavigate('quiz-selector')}>
+            <div className="option-icon-small">🎯</div>
+            <span>Advanced Quizzes</span>
+          </div>
         </div>
       </div>
     </div>
